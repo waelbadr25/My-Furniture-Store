@@ -1,3 +1,0 @@
-Sitemap: https://furniturestore3.netlify.app/sitemap.xml
-User-agent: *
-Allow: /
