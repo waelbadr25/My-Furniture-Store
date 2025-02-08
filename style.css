@@ -1,23 +1,26 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color:rgba(250, 247, 245, 0.611);
     margin: 0;
     padding: 0px;
     line-height: 1.6;
     direction: rtl; /* للكتابة من اليمين لليسار */
     text-align: right; /* محاذاة النص إلى اليمين */
+  background-color:#1514177d;
+    
 }
 
 
 .subContainer {
     padding: 50px 20px;
-   
+   margin: 0px 20px 20px 20px;
+   background-color: #F2F2F2;
+   box-shadow: 2px 2px 2px #11111167 ;
 }
 
-h1, h2, h3 {
+/*h1, h2, h3 {
     color: #333;
-}
+}*/
 
 p {
     margin-bottom: 20px;
@@ -119,7 +122,7 @@ nav {
     }
 
         .header-content .btn:hover {
-            background-color: #45a049;
+            background-color: #2E7D32;
         }
 
 
@@ -138,8 +141,10 @@ nav {
 }
 
 .post-content {
-    font-size: 16px;
-    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 /*.contant {
@@ -171,10 +176,11 @@ nav {
         margin-bottom: 20px;
         border: 1px solid #ccc;
         border-radius: 4px;
+       
     }
 
     .contact-form button {
-        background-color: #4CAF50;
+        background-color: #51ba55;
         color: white;
         padding: 10px 20px;
         border: none;
@@ -183,13 +189,20 @@ nav {
     }
 
         .contact-form button:hover {
-            background-color: #45a049;
+            background-color: #2E7D32;
         }
 
-.About h1 , .Services h1 ,  .contact h1 
+ .Services h1 ,  .contact h1 
 {
+   
     text-align: center;
-    border-bottom: 2px solid #111;
+    border-bottom: 2px solid #e4d8d8;
+}
+.About  , .Services  ,  .contact 
+{
+  
+   /* text-align: center;*/
+   
 }
 
 .footer {
@@ -316,14 +329,12 @@ a {
         flex: 1 0 calc(50% - 10px); /* تعديل حجم العناصر لعرض عمودين في الأجهزة الصغيرة */
     }
 }
-
-.float {
+.float , .float2
+{
     position: fixed;
     width: 100px;
     height: 40px;
-    bottom: 40px; /* المسافة من الأسفل */
     right: 20px; /* المسافة من اليمين */
-    background-color: #4CAF50;
     color: #fff;
     text-align: center;
     line-height: 40px;
@@ -333,12 +344,185 @@ a {
     text-decoration: none;
     z-index: 1000; /* يجعل الزر فوق العناصر الأخرى */
 }
+.float {
+    
+    bottom: 40px; /* المسافة من الأسفل */
+    background-color: #4CAF50;
+}
+.float2 {
+   
+    bottom: 90px; /* المسافة من الأسفل */
+    background-color: #E67E22;
+}
 
-    .float:hover {
-        background-color: #4CAF50;
+    .float:hover , .float2:hover {
+        background-color: #2e342f;
         cursor: pointer;
     }
-    #map {
-        height: 400px;
+    .about {
+        background-color: #f4f4f4;
+        padding: 40px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #about-title  {
+        font-size: 2.5rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .about p, .about ul , .post p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+        color: #2C3E50;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .about ul {
+        list-style-type: disc;
+        padding-left: 30px;
+    }
+
+    .about ul li {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    .about p:last-child {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #2C3E50;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .about {
+            padding: 30px 15px;
+        }
+
+        #about-title {
+            font-size: 2rem;
+        }
+
+        .about p, .about ul {
+            font-size: 1rem;
+        }
+
+        .about h2 {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #about-title {
+            font-size: 1.8rem;
+        }
+
+        .about p, .about ul {
+            font-size: 0.95rem;
+        }
+
+        .about h2 {
+            font-size: 1.4rem;
+        }
+    }
+    .services {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f9f9f9;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-item {
+        background: #ffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+
+    .service-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-item img {
         width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .service-item h2 {
+        font-size: 1.5rem;
+        color: #444;
+        margin: 15px 0;
+    }
+
+    .service-item p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .service-item h2 {
+            font-size: 1.25rem;
+        }
+
+        .service-item p {
+            font-size: 0.9rem;
+        }
+
+        .services-container {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .service-item {
+            padding: 15px;
+        }
+
+        .service-item h2 {
+            font-size: 1.1rem;
+        }
+
+        .service-item p {
+            font-size: 0.85rem;
+        }
     }

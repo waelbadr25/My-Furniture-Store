@@ -40,7 +40,23 @@ const imageUrls = [
     'images/img-20181024-wa0025.webp',
     'images/thumb-816x460-921f35dd8e3f8fbbb2fa3ec26aebaf95.jpg'
 ];
-
+const altTexts = [
+    "مطابخ مستعملة",
+    "اثاث مستعمل",
+    "مجالس مستعملة",
+    "اثاث منزلي ",
+    "مجالس متعملة ",
+    "مطابخ مستعملة",
+    "شراء معدات مطاعم ",
+    " معدات مطاعم مستعملة",
+    "غرف نوم",
+    "شراء معدات مطاعم ",
+    "تكيفات مستعملة",
+    "شراء معدات مطاعم ",
+    "مطابخ مستعملة",
+    "تكيفات مستعملة",
+    
+];
 const container = document.getElementById('gallery-item');
 
 // Loop through the image URLs and create img elements
@@ -50,7 +66,7 @@ for (let i = 0; i < imageUrls.length; i++) {
     // Set the src attribute
     img.src = imageUrls[i];
     // Optionally set alt text
-    img.alt = `Image ${i + 1}`;
+    img.alt = altTexts[i] || `صورة غير معرفة رقم ${i + 1}`;
     // Optionally set a class for styling
     img.className = 'dynamic-image';
     // Add the img element to the container
