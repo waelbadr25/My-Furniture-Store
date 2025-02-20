@@ -19,10 +19,10 @@
 
     <nav class="navbar" id="myNavbar">
         <ul id="nav-list">
-            <li><a onclick="toggleNavbar()" class="nav-link active" href="#Home">الصفحة الرئيسية</a></li>
-            <li><a onclick="toggleNavbar()" class="nav-link" href="#About">من نحن</a></li>
-            <li><a onclick="toggleNavbar()" class="nav-link" href="#Services">خدماتنا</a></li>
-            <li><a onclick="toggleNavbar()" class="nav-link" href="#Contact">اتصل بنا</a></li>
+            <li><a role="button" tabindex="0" onclick="toggleNavbar()" class="nav-link active" href="#Home">الصفحة الرئيسية</a></li>
+            <li><a role="button" tabindex="0" onclick="toggleNavbar()" class="nav-link" href="#About">من نحن</a></li>
+            <li><a role="button" tabindex="0" onclick="toggleNavbar()" class="nav-link" href="#Services">خدماتنا</a></li>
+            <li><a role="button" tabindex="0" onclick="toggleNavbar()" class="nav-link" href="#Contact">اتصل بنا</a></li>
             <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -255,11 +255,11 @@
     <div class="contact-form">
         <form action="/submit_form" method="post">
             <label for="name">الاسم</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" aria-required="true">
             <label for="email">البريد الإلكتروني</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" aria-required="true">
             <label for="message">الرسالة</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6" aria-required="true"></textarea>
             <button type="submit">إرسال</button>
         </form>
     </div>
